@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+rsconnect/
+/.quarto/
+race_data/
+*.Rproj
+*.html
