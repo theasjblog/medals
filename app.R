@@ -7,6 +7,8 @@ library(plotly)
 library(tidyr)
 library(markdown)
 library(shinythemes)
+library(lubridate)
+
 
 lapply(list.files(file.path('R'), full.names = TRUE), function(d){source(d)})
 

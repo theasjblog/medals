@@ -1,4 +1,5 @@
 server <- function(input, output, session){
+
   output$selectRaceTable <- renderDT({
     DT::datatable(allRaces %>%
                     select(c('race', 'type', 'distance', 'time', 'date')),

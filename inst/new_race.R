@@ -40,12 +40,12 @@ create_new_folder <- function(race_name = 'RACE NAME',
 }
 
 
-# create_new_folder(race_name = 'RACE NAME',
-#                   race_date = as.character(Sys.Date()),
-#                   race_type = 'RACE TYPE',
-#                   race_distance = '1m',
-#                   race_link = '',
-#                   race_time = '',
-#                   race_overall = '',
-#                   race_category = '',
-#                   target_folder = 'race_data_raw')
+create_new_folder(race_name = 'Bracebridge Sprint Triathlon',
+                  race_date = as.character(Sys.Date()),
+                  race_type = 'spint triathlon',
+                  race_distance = '750m/20K/5K',
+                  race_link = 'https://connect.garmin.com/modern/activity/16288710730',
+                  race_time = '1:15:54',
+                  race_overall = '6/213',
+                  race_category = '2/14',
+                  target_folder = 'race_data_raw')

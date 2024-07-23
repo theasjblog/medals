@@ -1,3 +1,29 @@
+formatTime <- function(time_string){
+  time_parts <- str_match(time_string, "(\\d+)h (\\d+)m (\\d+)s")
+
+  # Convert to a duration
+  duration <- dhours(as.numeric(time_parts[2])) +
+    dminutes(as.numeric(time_parts[3])) +
+    dseconds(as.numeric(time_parts[4]))
+
+  if(is.na(duration)){
+    time_parts <- str_match(time_string, "(\\d+)m (\\d+)s")
+
+    # Convert to a duration
+    duration <- dminutes(as.numeric(time_parts[2])) +
+      dseconds(as.numeric(time_parts[3]))
+  }
+
+  if(is.na(duration)){
+    time_parts <- str_match(time_string, "(\\d+)s")
+
+    # Convert to a duration
+    duration <- dseconds(as.numeric(time_parts[2]))
+  }
+
+  return(duration)
+}
+
 get_trends_data <- function(allRaces, trends, idx){
   toPlot <- allRaces %>%
     filter(type == trends$type[idx]) %>%

@@ -131,6 +131,35 @@ for(i in allDirs){
       }
     }, error = function(e){invisible(NULL)})
   }
+
+  if(dir.exists(file.path(newPath, 'img_modal'))){
+    imgModal <- list.files(file.path(newPath, 'img_modal'))
+    if(length(imgModal)>0){
+      # web site
+
+      web_temp <- readLines(file.path('inst', 'template_newDir', 'web_page.qmd'))
+      if(!file.exists(file.path(i, 'report.md'))){
+        # TODO: we should also remove reports that are empty
+        web_temp <- web_temp[stringr::str_detect(string = web_temp,
+                                                 pattern = "\\{\\{< include report.md >\\}\\}",
+                                                 negate = TRUE)]
+      }
+      web_temp <- c(web_temp,
+                    '::: {layout-ncol=4}')
+      for(thisImg in imgModal){
+        web_temp <- c(web_temp,
+                           paste0('![](img_modal/',
+                                  thisImg,
+                                  '){ width="100" group="hi" }'))
+        web_temp <- c(web_temp, '')
+      }
+      web_temp <- c(web_temp,
+                    '',
+                         ":::")
+
+      writeLines(web_temp, file.path(newPath, 'web_page.qmd'))
+    }
+  }
 }
 
 cat('\n\nCHECK FOLDERS\n')
