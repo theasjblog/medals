@@ -1,2 +1,0 @@
-## RACE_NAME
-### RACE_DATE
