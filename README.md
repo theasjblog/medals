@@ -60,3 +60,7 @@ This is a free text markdown where you can write your race report.
 * Make sure the data.json and report.md have everything you want.
 * Run `source('inst/sync_folder.R')` to sync `race_data_raw` with `race_data`.
 
+
+# Publish in quarto
+
+`quarto publish gh-pages`
