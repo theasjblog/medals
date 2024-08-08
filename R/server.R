@@ -119,7 +119,7 @@ server <- function(input, output, session){
         renderImage({
           list(src = selectedImg,
                contentType = 'image/png',
-               width = config::get('img_size_large'),
+               # width = config::get('img_size_large'),
                # height = 300,
                alt = "This is alternate text")
         },
