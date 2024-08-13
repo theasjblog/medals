@@ -12,7 +12,8 @@ size_tolerance <- 0.05
 #folders
 # root <- "/Users/adrianstevejoseph/Library/CloudStorage/GoogleDrive-josephadrian83@gmail.com/My Drive/race_data_raw"
 # root <- "race_data_raw"
-root <- '/Users/adrianstevejoseph/Library/Mobile Documents/com~apple~CloudDocs/Sport/race_data_raw'
+# root <- '/Users/adrianstevejoseph/Library/Mobile Documents/com~apple~CloudDocs/Sport/race_data_raw'
+root <- '../../Sport/race_data_raw'
 allDirs <- list.dirs(root, full.names = TRUE)
 allDirs <- allDirs[allDirs != root]
 allDirs <- allDirs[!stringr::str_detect(allDirs, '/img')]

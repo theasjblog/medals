@@ -37,15 +37,16 @@ create_new_folder <- function(race_name = 'RACE NAME',
   mark_temp <- gsub('RACE_NAME', stringr::str_to_title(race_name), mark_temp)
   mark_temp <- gsub('RACE_DATE', race_date, mark_temp)
   writeLines(mark_temp, file.path(dest_path, 'report.md'))
+  dir.create(file.path(dest_path, 'img'))
 }
 
 
-create_new_folder(race_name = 'Bracebridge Sprint Triathlon',
+create_new_folder(race_name = 'Barrie Sprint Triathlon',
                   race_date = as.character(Sys.Date()),
-                  race_type = 'spint triathlon',
+                  race_type = 'sprint triathlon',
                   race_distance = '750m/20K/5K',
-                  race_link = 'https://connect.garmin.com/modern/activity/16288710730',
-                  race_time = '1:15:54',
-                  race_overall = '6/213',
-                  race_category = '2/14',
+                  race_link = 'https://connect.garmin.com/modern/activity/16734034800',
+                  race_time = '1:10:09',
+                  race_overall = '35/344',
+                  race_category = '5/30',
                   target_folder = 'race_data_raw')
