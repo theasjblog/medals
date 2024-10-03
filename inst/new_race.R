@@ -41,12 +41,12 @@ create_new_folder <- function(race_name = 'RACE NAME',
 }
 
 
-create_new_folder(race_name = 'Barrie Sprint Triathlon',
-                  race_date = as.character(Sys.Date()),
+create_new_folder(race_name = 'Oakville 10K',
+                  race_date = as.character(Sys.Date()-4),
                   race_type = 'sprint triathlon',
-                  race_distance = '750m/20K/5K',
-                  race_link = 'https://connect.garmin.com/modern/activity/16734034800',
-                  race_time = '1:10:09',
-                  race_overall = '35/344',
-                  race_category = '5/30',
+                  race_distance = '10K',
+                  race_link = 'https://connect.garmin.com/modern/activity/17159381162',
+                  race_time = '45:13',
+                  race_overall = '39/527',
+                  race_category = '9/59',
                   target_folder = 'race_data_raw')
